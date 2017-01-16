@@ -282,7 +282,7 @@ namespace Nop.Services.ExportImport
             }
         }
 
-        protected virtual IList<PropertyByName<T>> GetPropertysByExcellCells<T>(ExcelWorksheet worksheet)
+        protected virtual IList<PropertyByName<T>> GetPropertiesByExcelCells<T>(ExcelWorksheet worksheet)
         {
             var properties = new List<PropertyByName<T>>();
             var poz = 1;
@@ -326,7 +326,7 @@ namespace Nop.Services.ExportImport
                     throw new NopException("No worksheet found");
 
                 //the columns
-                var properties = GetPropertysByExcellCells<Product>(worksheet);
+                var properties = GetPropertiesByExcelCells<Product>(worksheet);
                 
                 var manager = new PropertyManager<Product>(properties);
 
@@ -1232,7 +1232,7 @@ namespace Nop.Services.ExportImport
                     throw new NopException("No worksheet found");
 
                 //the columns
-                var properties = GetPropertysByExcellCells<Manufacturer>(worksheet);
+                var properties = GetPropertiesByExcelCells<Manufacturer>(worksheet);
 
                 var manager = new PropertyManager<Manufacturer>(properties);
 
@@ -1350,7 +1350,7 @@ namespace Nop.Services.ExportImport
                     throw new NopException("No worksheet found");
 
                 //the columns
-                var properties = GetPropertysByExcellCells<Category>(worksheet);
+                var properties = GetPropertiesByExcelCells<Category>(worksheet);
 
                 var manager = new PropertyManager<Category>(properties);
 

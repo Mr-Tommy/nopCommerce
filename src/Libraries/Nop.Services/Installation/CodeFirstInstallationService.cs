@@ -5832,6 +5832,10 @@ namespace Nop.Services.Installation
                 SpecificationAttributes =true
             });
 
+            settingService.SaveSetting(new CategoryEditorSettings());
+
+            settingService.SaveSetting(new ManufacturerEditorSettings());
+
             settingService.SaveSetting(new CatalogSettings
             {
                 AllowViewUnpublishedProductPage = true,
